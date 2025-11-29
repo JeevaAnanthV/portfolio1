@@ -27,27 +27,28 @@ export default function ArchitectureViewerClient({ url }: { url: string }) {
                 setData(d);
                 if (d.layers.length > 0) setActiveLayer(d.layers[0].id);
             })
-            .catch((err) => console.error('Failed to load architecture:', err));
+            .catch(() => { });
     }, [url]);
 
     useEffect(() => {
         if (activeLayer && data) {
             const layer = data.layers.find((l) => l.id === activeLayer);
             if (layer) {
-                // In a real app, we'd fetch the snippet content. For now, we mock it or assume it's loaded.
-                // Since the prompt asks to read snippets, we'll simulate fetching or just show a placeholder
-                // if we can't easily fetch local files from the client without an API route.
-                // For this phase, we'll display the filename and a mock content.
-                setSnippetContent(`# Content for ${layer.snippet}\n\n// Loading real content would require an API route\n// or static generation of snippets into the JSON.`);
+                const snippetUrl = url.replace('architecture.json', `repro/snippets/${layer.snippet}`);
+                fetch(snippetUrl)
+                    .then((res) => res.text())
+                    .then((text) => setSnippetContent(text))
+                    .catch(() => setSnippetContent(''));
             }
         }
-    }, [activeLayer, data]);
+    }, [activeLayer, data, url]);
 
     if (!data) return null;
 
+    const activeLayerData = data.layers.find(l => l.id === activeLayer);
+
     return (
         <div className="flex flex-col md:flex-row gap-4 p-4 border rounded-lg bg-card text-card-foreground">
-            {/* Left Column: Layers */}
             <div className="w-full md:w-1/3 space-y-2">
                 <h3 className="font-bold text-lg mb-4">System Layers</h3>
                 {data.layers.map((layer) => (
@@ -73,20 +74,17 @@ export default function ArchitectureViewerClient({ url }: { url: string }) {
                 ))}
             </div>
 
-            {/* Right Area: Diagram & Snippet */}
             <div className="w-full md:w-2/3 flex flex-col gap-4">
-                {/* Interactive Diagram Placeholder */}
                 <div className="h-48 bg-muted rounded flex items-center justify-center border-2 border-dashed">
                     <div className="text-center">
                         <p className="font-bold">Interactive Diagram</p>
-                        <p className="text-sm text-muted-foreground">Active: {data.layers.find(l => l.id === activeLayer)?.label}</p>
+                        <p className="text-sm text-muted-foreground">{activeLayerData?.label}</p>
                     </div>
                 </div>
 
-                {/* Code Snippet Pane */}
                 <div className="flex-1 bg-black text-green-400 p-4 rounded font-mono text-sm overflow-auto h-48">
                     <div className="flex justify-between items-center mb-2 border-b border-green-900 pb-1">
-                        <span>{data.layers.find(l => l.id === activeLayer)?.snippet}</span>
+                        <span>{activeLayerData?.snippet}</span>
                         <span className="text-xs opacity-50">Read-only</span>
                     </div>
                     <pre>{snippetContent}</pre>

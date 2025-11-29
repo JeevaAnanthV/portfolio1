@@ -20,7 +20,7 @@ test('homepage & projects load and architecture viewer toggles', async ({ page }
         await layerBtn.click();
 
         // Check if snippet drawer or content updates. 
-        // In our mock, clicking a layer updates the "Active: ..." text.
-        await expect(page.getByText(/Active:/)).toBeVisible();
+        // Clicking a layer should show the snippet filename in the code pane.
+        await expect(page.getByText(/\.(py|tsx|sql|ts)$/)).toBeVisible();
     }
 });

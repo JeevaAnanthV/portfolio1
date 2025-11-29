@@ -2,5 +2,11 @@
   "dependencies": {
     "pdf-parse": "^2.4.5",
     "playwright": "^1.57.0"
+  },
+  "postcss": {
+    "plugins": {
+      "tailwindcss": {},
+      "autoprefixer": {}
+    }
   }
 }

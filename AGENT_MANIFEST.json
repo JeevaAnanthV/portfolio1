@@ -1,29 +1,32 @@
 {
-    "agent_id": "ANTIGRAVITY_PHASE1_ARCH",
-    "timestamp": "2025-11-29T13:45:00+05:30",
-    "branch": "ag/phase1/architecture-viewer",
+    "agent_id": "ANTIGRAVITY_PHASE1_LAYOUT_FIX",
+    "timestamp": "2025-11-29T15:00:00+05:30",
+    "branch": "ag/phase1/layout-fix",
     "changed_files": [
+        "apps/web/src/app/globals.css",
+        "apps/web/src/app/layout.tsx",
+        "apps/web/src/app/page.tsx",
+        "apps/web/src/app/projects/[slug]/page.tsx",
         "apps/web/components/ArchitectureViewer.tsx",
         "apps/web/components/ArchitectureViewerClient.tsx",
-        "apps/web/src/app/projects/[slug]/page.tsx",
-        "apps/web/src/app/page.tsx",
-        "content/projects/knitibot/architecture.json",
-        "content/projects/inquiro/architecture.json",
-        "content/projects/elysium-ai/architecture.json",
-        "content/projects/knitibot/repro/snippets/ingest_pipeline.py",
-        "apps/web/__tests__/ArchitectureViewer.test.tsx",
-        "apps/web/__tests__/ArchitectureViewerClient.test.tsx",
-        "apps/web/stories/ArchitectureViewer.stories.tsx",
-        "apps/web/package.json",
-        "apps/web/playwright.config.ts",
-        "apps/web/e2e/architecture.spec.ts"
+        "apps/web/components/StackGraph.tsx",
+        "apps/web/components/StackGraphClient.tsx",
+        "apps/web/__tests__/StackGraph.test.tsx",
+        "apps/web/stories/StackGraph.stories.tsx",
+        "apps/web/tailwind.config.js",
+        "apps/web/tsconfig.json",
+        "apps/web/e2e/architecture.spec.ts",
+        "package.json",
+        "scripts/generate_stackgraph_screenshots.js"
     ],
     "screenshots": {
-        "homepage_dark": "96987441acb3858f509f3d4c58ac89a19473d9613de01237052e8f2bacef1998",
-        "homepage_light": "12ae313bd53460af84efbf7b1528d38608512a2a6697fc2531bb4ffbfbbe7727",
-        "project_knitibot": "2dacd882ee391c1ed38fd28f4374e776c37445ee371c405062c09a274340591e",
-        "project_inquiro": "80cb07ebd323343a6e61171c1d33afbfd1055568e7240736a7cc85d2274e7be7",
-        "project_elysium-ai": "e0a027724e6d8438073fc7a4166e3f16831d8d7102ec6ea82ef8b82989d23aca"
+        "homepage_dark": "d6af85ea4c4e88a72f18354a5059328ce411e305a7eb02932505eec56009192b",
+        "homepage_light": "d6af85ea4c4e88a72f18354a5059328ce411e305a7eb02932505eec56009192b",
+        "project_knitibot": "bc5c486532ad5bac684e3f0ac0c9352fbfad9b957094214ed0dcbb10be05fb9e",
+        "project_inquiro": "ba340c424fb1dcbc124856179283f6fb90386cae8f8fe2be846c21c9e2f59746",
+        "project_elysium-ai": "d96f946442ae3f73ae845f4b42ef633fff21f9758e61d3049614148ae7e9672b",
+        "stackgraph_dark": "d6af85ea4c4e88a72f18354a5059328ce411e305a7eb02932505eec56009192b",
+        "stackgraph_light": "d6af85ea4c4e88a72f18354a5059328ce411e305a7eb02932505eec56009192b"
     },
     "pdfs": {
         "resume_designer": "artifacts/resume_designer.pdf"
@@ -34,13 +37,15 @@
         "lighthouse": null
     },
     "checksums": {
-        "homepage_dark.png": "96987441acb3858f509f3d4c58ac89a19473d9613de01237052e8f2bacef1998",
-        "homepage_light.png": "12ae313bd53460af84efbf7b1528d38608512a2a6697fc2531bb4ffbfbbe7727",
-        "project_elysium-ai.png": "e0a027724e6d8438073fc7a4166e3f16831d8d7102ec6ea82ef8b82989d23aca",
-        "project_inquiro.png": "80cb07ebd323343a6e61171c1d33afbfd1055568e7240736a7cc85d2274e7be7",
-        "project_knitibot.png": "2dacd882ee391c1ed38fd28f4374e776c37445ee371c405062c09a274340591e",
-        "resume_designer.pdf": "7fd134a8f2c82409cce2f691e51e65f2edb683c38b19526c38bc32d539471d2f"
+        "homepage_dark.png": "d6af85ea4c4e88a72f18354a5059328ce411e305a7eb02932505eec56009192b",
+        "homepage_light.png": "d6af85ea4c4e88a72f18354a5059328ce411e305a7eb02932505eec56009192b",
+        "project_elysium-ai.png": "d96f946442ae3f73ae845f4b42ef633fff21f9758e61d3049614148ae7e9672b",
+        "project_inquiro.png": "ba340c424fb1dcbc124856179283f6fb90386cae8f8fe2be846c21c9e2f59746",
+        "project_knitibot.png": "bc5c486532ad5bac684e3f0ac0c9352fbfad9b957094214ed0dcbb10be05fb9e",
+        "resume_designer.pdf": "bd0c940d8fd1154aa0f3a3de5f8035e98702fe6dbdf2c6cb7a17cb03f9f7f118",
+        "stackgraph-dark.png": "d6af85ea4c4e88a72f18354a5059328ce411e305a7eb02932505eec56009192b",
+        "stackgraph-light.png": "d6af85ea4c4e88a72f18354a5059328ce411e305a7eb02932505eec56009192b"
     },
     "source_resume_path": "jeeva-portfolio/JeevaAnanthV.pdf",
-    "notes": "Implemented ArchitectureViewer. Generated content and artifacts. Fixed 404 issue with dynamic routes in Next.js 15+. Added E2E tests."
+    "notes": "Phase 1 Global Layout Repair + StackGraph: Fixed globals.css, layout.tsx, page.tsx, ArchitectureViewer (removed debug dumps), Tailwind/PostCSS config, Next.js dynamic params. Implemented StackGraph component with force-directed graph visualization of tech stack. All styles now applied correctly. Build successful. Tests passing."
 }
