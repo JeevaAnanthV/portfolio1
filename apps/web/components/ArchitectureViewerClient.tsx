@@ -109,7 +109,14 @@ export default function ArchitectureViewerClient({ url }: { url: string }) {
         }
     }, [activeLayer, data, fetchUrl]);
 
-    if (!data) return null;
+    if (!data) {
+        return (
+            <div data-testid="architecture-viewer-loading" className="p-4 border rounded animate-pulse">
+                <div className="h-4 bg-muted rounded w-3/4 mb-2"></div>
+                <div className="h-4 bg-muted rounded w-1/2"></div>
+            </div>
+        );
+    }
 
     const activeLayerData = data.layers.find(l => l.id === activeLayer);
 

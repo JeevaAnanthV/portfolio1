@@ -170,7 +170,7 @@ export default function StackGraphClient() {
     };
 
     return (
-        <div className="relative w-full">
+        <div data-testid="stack-graph-client" className="relative w-full">
             <svg
                 ref={svgRef}
                 width={width}
@@ -207,6 +207,15 @@ export default function StackGraphClient() {
                                 whileHover={{ scale: 1.2 }}
                                 whileTap={{ scale: 0.9 }}
                                 onClick={() => handleNodeClick(node)}
+                                onKeyDown={(e) => {
+                                    if (e.key === 'Enter' || e.key === ' ') {
+                                        e.preventDefault();
+                                        handleNodeClick(node);
+                                    }
+                                }}
+                                tabIndex={0}
+                                role="button"
+                                aria-label={`${node.name} - ${node.category}. Click to learn more.`}
                                 style={{ cursor: 'pointer' }}
                             />
                             <text

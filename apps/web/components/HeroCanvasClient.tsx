@@ -46,6 +46,7 @@ function LowPolyCluster({ isMobile }: { isMobile: boolean }) {
 export default function HeroCanvasClient() {
     const [isMobile, setIsMobile] = useState(false);
     const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
+    const [isPaused, setIsPaused] = useState(false);
 
     useEffect(() => {
         const mobileQuery = window.matchMedia('(max-width: 768px)');
@@ -63,15 +64,33 @@ export default function HeroCanvasClient() {
         return null; // Fallback handled by parent
     }
 
+    // Adaptive DPR for performance
+    const dpr = isMobile ? [1, 1.5] : [1, 2];
+
     return (
-        <Canvas camera={{ position: [0, 0, 5], fov: 45 }} dpr={[1, 2]}>
-            <ambientLight intensity={0.5} />
-            <pointLight position={[10, 10, 10]} intensity={1} />
-            <Suspense fallback={null}>
-                <LowPolyCluster isMobile={isMobile} />
-                <Environment preset="city" />
-            </Suspense>
-            <OrbitControls enableZoom={false} enablePan={false} autoRotate autoRotateSpeed={0.5} />
-        </Canvas>
+        <>
+            <Canvas camera={{ position: [0, 0, 5], fov: 45 }} dpr={dpr} performance={{ min: 0.5 }}>
+                <ambientLight intensity={0.5} />
+                <pointLight position={[10, 10, 10]} intensity={1} />
+                <Suspense fallback={null}>
+                    <LowPolyCluster isMobile={isMobile} />
+                    <Environment preset="city" />
+                </Suspense>
+                <OrbitControls 
+                    enableZoom={false} 
+                    enablePan={false} 
+                    autoRotate={!isPaused} 
+                    autoRotateSpeed={0.5} 
+                />
+            </Canvas>
+            {/* Pause animation control */}
+            <button
+                onClick={() => setIsPaused(!isPaused)}
+                className="absolute bottom-4 right-4 z-30 px-4 py-2 bg-background/80 text-foreground rounded-md text-sm hover:bg-background/90 focus:outline-none focus:ring-2 focus:ring-primary"
+                aria-label={isPaused ? "Resume animation" : "Pause animation"}
+            >
+                {isPaused ? "▶ Resume" : "⏸ Pause"}
+            </button>
+        </>
     );
 }

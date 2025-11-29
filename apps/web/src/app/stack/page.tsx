@@ -1,4 +1,4 @@
-import StackGraph from '../../components/StackGraph';
+import StackGraph from '../../../components/StackGraph';
 
 export default function StackPage() {
   return (
