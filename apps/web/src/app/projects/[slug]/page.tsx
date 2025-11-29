@@ -4,8 +4,9 @@ import { notFound } from 'next/navigation';
 // In a real app, we'd generate static params or fetch data.
 // For this phase, we just render the viewer with the correct URL.
 
-export default async function ProjectPage({ params }: { params: Promise<{ slug: string }> }) {
-    const { slug } = await params;
+export default async function ProjectPage({ params }: { params: Promise<{ slug: string }> | { slug: string } }) {
+    const resolvedParams = await params;
+    const { slug } = resolvedParams;
     const validProjects = ['knitibot', 'inquiro', 'elysium-ai'];
 
     if (!validProjects.includes(slug)) {

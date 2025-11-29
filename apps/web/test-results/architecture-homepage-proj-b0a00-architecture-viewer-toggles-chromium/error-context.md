@@ -1,0 +1,50 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - main [ref=e2]:
+    - generic [ref=e3]:
+      - img "Jeeva Ananth V Portfolio Hero" [ref=e4]
+      - img "JA Monogram" [ref=e10]
+    - generic [ref=e11]:
+      - heading "Jeeva Ananth V" [level=1] [ref=e12]
+      - generic [ref=e13]:
+        - 'heading "Architecture Preview: KnitiBot" [level=2] [ref=e14]'
+        - generic [ref=e15]:
+          - generic [ref=e16]:
+            - heading "System Layers" [level=3] [ref=e17]
+            - button "Ingestion Internal docs & knowledge resources KafkaPython" [pressed] [ref=e18]:
+              - generic [ref=e19]: Ingestion
+              - generic [ref=e20]: Internal docs & knowledge resources
+              - generic [ref=e21]: KafkaPython
+            - button "Vectorization Embedding generation HuggingFacepgvector" [ref=e22]:
+              - generic [ref=e23]: Vectorization
+              - generic [ref=e24]: Embedding generation
+              - generic [ref=e25]: HuggingFacepgvector
+            - button "Retriever Semantic search PostgreSQLpgvector" [ref=e26]:
+              - generic [ref=e27]: Retriever
+              - generic [ref=e28]: Semantic search
+              - generic [ref=e29]: PostgreSQLpgvector
+            - button "RAG Engine Context orchestration LangChainLLM" [ref=e30]:
+              - generic [ref=e31]: RAG Engine
+              - generic [ref=e32]: Context orchestration
+              - generic [ref=e33]: LangChainLLM
+            - button "API Layer Secure endpoints FastAPIOAuth2" [ref=e34]:
+              - generic [ref=e35]: API Layer
+              - generic [ref=e36]: Secure endpoints
+              - generic [ref=e37]: FastAPIOAuth2
+            - button "Frontend User Interface Next.jsReact" [ref=e38]:
+              - generic [ref=e39]: Frontend
+              - generic [ref=e40]: User Interface
+              - generic [ref=e41]: Next.jsReact
+          - generic [ref=e42]:
+            - generic [ref=e44]:
+              - paragraph [ref=e45]: Interactive Diagram
+              - paragraph [ref=e46]: "Active: Ingestion"
+            - generic [ref=e47]:
+              - generic [ref=e48]: ingest_pipeline.pyRead-only
+              - generic [ref=e49]: "# Content for ingest_pipeline.py // Loading real content would require an API route // or static generation of snippets into the JSON."
+  - button "Open Next.js Dev Tools" [ref=e55] [cursor=pointer]:
+    - img [ref=e56]
+  - alert [ref=e59]
+```

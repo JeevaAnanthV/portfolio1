@@ -16,55 +16,18 @@ nohup: ignoring input
 
    ▲ Next.js 16.0.5 (Turbopack)
    - Local:         http://localhost:3000
-   - Network:       http://192.168.0.76:3000
+   - Network:       http://192.168.1.37:3000
 
  ✓ Starting...
 [baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
- ✓ Ready in 486ms
-Error: Route "/projects/[slug]" used `params.slug`. `params` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
-    at ProjectPage (src/app/projects/[slug]/page.tsx:8:13)
-   6 |
-   7 | export default function ProjectPage({ params }: { params: { slug: string } }) {
->  8 |     const { slug } = params;
-     |             ^
-   9 |     const validProjects = ['knitibot', 'inquiro', 'elysium-ai'];
-  10 |
-  11 |     if (!validProjects.includes(slug)) {
- HEAD /projects/knitibot 404 in 3.5s (compile: 3.3s, render: 229ms)
- GET / 200 in 1300ms (compile: 1092ms, render: 208ms)
-Error: Route "/projects/[slug]" used `params.slug`. `params` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
-    at ProjectPage (src/app/projects/[slug]/page.tsx:8:13)
-   6 |
-   7 | export default function ProjectPage({ params }: { params: { slug: string } }) {
->  8 |     const { slug } = params;
-     |             ^
-   9 |     const validProjects = ['knitibot', 'inquiro', 'elysium-ai'];
-  10 |
-  11 |     if (!validProjects.includes(slug)) {
- GET /projects/knitibot 404 in 140ms (compile: 42ms, render: 98ms)
-Error: Route "/projects/[slug]" used `params.slug`. `params` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
-    at ProjectPage (src/app/projects/[slug]/page.tsx:8:13)
-   6 |
-   7 | export default function ProjectPage({ params }: { params: { slug: string } }) {
->  8 |     const { slug } = params;
-     |             ^
-   9 |     const validProjects = ['knitibot', 'inquiro', 'elysium-ai'];
-  10 |
-  11 |     if (!validProjects.includes(slug)) {
- GET /projects/inquiro 404 in 92ms (compile: 29ms, render: 63ms)
-Error: Route "/projects/[slug]" used `params.slug`. `params` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
-    at ProjectPage (src/app/projects/[slug]/page.tsx:8:13)
-   6 |
-   7 | export default function ProjectPage({ params }: { params: { slug: string } }) {
->  8 |     const { slug } = params;
-     |             ^
-   9 |     const validProjects = ['knitibot', 'inquiro', 'elysium-ai'];
-  10 |
-  11 |     if (!validProjects.includes(slug)) {
- GET /projects/elysium-ai 404 in 87ms (compile: 30ms, render: 57ms)
- ✓ Compiled in 3ms
- HEAD /projects/knitibot 200 in 254ms (compile: 122ms, render: 132ms)
- GET / 200 in 46ms (compile: 3ms, render: 43ms)
- GET /projects/knitibot 200 in 84ms (compile: 32ms, render: 52ms)
- GET /projects/inquiro 200 in 70ms (compile: 28ms, render: 42ms)
- GET /projects/elysium-ai 200 in 60ms (compile: 26ms, render: 34ms)
+ ✓ Ready in 960ms
+ ○ Compiling / ...
+ GET / 200 in 4.5s (compile: 4.1s, render: 341ms)
+ GET /projects/knitibot 200 in 1399ms (compile: 1268ms, render: 131ms)
+ GET /projects/inquiro 200 in 74ms (compile: 31ms, render: 44ms)
+ GET /projects/elysium-ai 200 in 83ms (compile: 33ms, render: 50ms)
+ GET / 200 in 59ms (compile: 4ms, render: 55ms)
+ GET / 200 in 98ms (compile: 12ms, render: 86ms)
+ GET /projects/knitibot 200 in 110ms (compile: 38ms, render: 73ms)
+ GET /projects/inquiro 200 in 82ms (compile: 30ms, render: 51ms)
+ GET /projects/elysium-ai 200 in 117ms (compile: 35ms, render: 82ms)

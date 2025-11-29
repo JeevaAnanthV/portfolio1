@@ -1,6 +1,6 @@
 {
     "agent_id": "ANTIGRAVITY_PHASE1_ARCH",
-    "timestamp": "2025-11-29T13:30:00+05:30",
+    "timestamp": "2025-11-29T13:45:00+05:30",
     "branch": "ag/phase1/architecture-viewer",
     "changed_files": [
         "apps/web/components/ArchitectureViewer.tsx",
@@ -14,7 +14,9 @@
         "apps/web/__tests__/ArchitectureViewer.test.tsx",
         "apps/web/__tests__/ArchitectureViewerClient.test.tsx",
         "apps/web/stories/ArchitectureViewer.stories.tsx",
-        "apps/web/package.json"
+        "apps/web/package.json",
+        "apps/web/playwright.config.ts",
+        "apps/web/e2e/architecture.spec.ts"
     ],
     "screenshots": {
         "homepage_dark": "96987441acb3858f509f3d4c58ac89a19473d9613de01237052e8f2bacef1998",
@@ -28,7 +30,7 @@
     },
     "test_summary": {
         "unit_pass": true,
-        "e2e_pass": null,
+        "e2e_pass": true,
         "lighthouse": null
     },
     "checksums": {
@@ -40,5 +42,5 @@
         "resume_designer.pdf": "7fd134a8f2c82409cce2f691e51e65f2edb683c38b19526c38bc32d539471d2f"
     },
     "source_resume_path": "jeeva-portfolio/JeevaAnanthV.pdf",
-    "notes": "Implemented ArchitectureViewer. Generated content and artifacts. Fixed 404 issue with dynamic routes in Next.js 15+."
+    "notes": "Implemented ArchitectureViewer. Generated content and artifacts. Fixed 404 issue with dynamic routes in Next.js 15+. Added E2E tests."
 }
