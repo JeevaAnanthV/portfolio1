@@ -1,0 +1,43 @@
+{
+    "slug": "inquiro",
+    "layers": [
+        {
+            "id": "ingest",
+            "label": "Ingestion",
+            "description": "PDF, Web, Video sources",
+            "tech": [
+                "Scrapy",
+                "LangChain"
+            ],
+            "snippet": "multimodal_ingest.py"
+        },
+        {
+            "id": "vectorize",
+            "label": "Vectorization",
+            "description": "Multimodal embeddings",
+            "tech": [
+                "Google GenAI"
+            ],
+            "snippet": "embeddings.py"
+        },
+        {
+            "id": "retriever",
+            "label": "Retriever",
+            "description": "Vector search",
+            "tech": [
+                "ChromaDB"
+            ],
+            "snippet": "chroma_query.py"
+        },
+        {
+            "id": "rag",
+            "label": "RAG Engine",
+            "description": "Generative response",
+            "tech": [
+                "Google GenAI",
+                "LangChain"
+            ],
+            "snippet": "generation.py"
+        }
+    ]
+}

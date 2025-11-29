@@ -1,0 +1,43 @@
+{
+    "slug": "elysium-ai",
+    "layers": [
+        {
+            "id": "perception",
+            "label": "Perception",
+            "description": "Real-time affective state",
+            "tech": [
+                "Multimodal Sensors"
+            ],
+            "snippet": "affective_input.py"
+        },
+        {
+            "id": "agents",
+            "label": "Multi-Agent Core",
+            "description": "Emotionally aware agents",
+            "tech": [
+                "MCP",
+                "LLM"
+            ],
+            "snippet": "agent_swarm.py"
+        },
+        {
+            "id": "memory",
+            "label": "Memory",
+            "description": "Context sharing",
+            "tech": [
+                "RAG",
+                "Vector DB"
+            ],
+            "snippet": "memory_store.py"
+        },
+        {
+            "id": "action",
+            "label": "Action",
+            "description": "Adaptive behavior",
+            "tech": [
+                "Python"
+            ],
+            "snippet": "behavior_controller.py"
+        }
+    ]
+}

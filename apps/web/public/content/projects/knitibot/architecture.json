@@ -1,0 +1,65 @@
+{
+    "slug": "knitibot",
+    "layers": [
+        {
+            "id": "ingest",
+            "label": "Ingestion",
+            "description": "Internal docs & knowledge resources",
+            "tech": [
+                "Kafka",
+                "Python"
+            ],
+            "snippet": "ingest_pipeline.py"
+        },
+        {
+            "id": "vectorize",
+            "label": "Vectorization",
+            "description": "Embedding generation",
+            "tech": [
+                "HuggingFace",
+                "pgvector"
+            ],
+            "snippet": "vectorizer.py"
+        },
+        {
+            "id": "retriever",
+            "label": "Retriever",
+            "description": "Semantic search",
+            "tech": [
+                "PostgreSQL",
+                "pgvector"
+            ],
+            "snippet": "retriever.sql"
+        },
+        {
+            "id": "rag",
+            "label": "RAG Engine",
+            "description": "Context orchestration",
+            "tech": [
+                "LangChain",
+                "LLM"
+            ],
+            "snippet": "rag_chain.py"
+        },
+        {
+            "id": "api",
+            "label": "API Layer",
+            "description": "Secure endpoints",
+            "tech": [
+                "FastAPI",
+                "OAuth2"
+            ],
+            "snippet": "api_routes.py"
+        },
+        {
+            "id": "frontend",
+            "label": "Frontend",
+            "description": "User Interface",
+            "tech": [
+                "Next.js",
+                "React"
+            ],
+            "snippet": "chat_interface.tsx"
+        }
+    ]
+}

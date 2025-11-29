@@ -1,40 +1,44 @@
 {
-    "agent_id": "ANTIGRAVITY_PHASE1_HERO",
-    "timestamp": "2025-11-29T13:00:00+05:30",
-    "branch": "ag/phase1/hero",
+    "agent_id": "ANTIGRAVITY_PHASE1_ARCH",
+    "timestamp": "2025-11-29T13:30:00+05:30",
+    "branch": "ag/phase1/architecture-viewer",
     "changed_files": [
-        "apps/web/components/HeroCanvas.tsx",
-        "apps/web/components/HeroCanvasClient.tsx",
-        "apps/web/public/ja-monogram.svg",
-        "apps/web/public/hero-fallback.webp",
-        "apps/web/__tests__/HeroCanvas.test.tsx",
-        "apps/web/stories/HeroCanvas.stories.tsx",
-        "apps/web/jest.config.js",
-        "apps/web/jest.setup.js",
-        "apps/web/package.json",
-        "apps/web/next.config.js",
-        "scripts/build_pdf_playwright.js",
-        "apps/web/src/app/page.tsx"
+        "apps/web/components/ArchitectureViewer.tsx",
+        "apps/web/components/ArchitectureViewerClient.tsx",
+        "apps/web/src/app/projects/[slug]/page.tsx",
+        "apps/web/src/app/page.tsx",
+        "content/projects/knitibot/architecture.json",
+        "content/projects/inquiro/architecture.json",
+        "content/projects/elysium-ai/architecture.json",
+        "content/projects/knitibot/repro/snippets/ingest_pipeline.py",
+        "apps/web/__tests__/ArchitectureViewer.test.tsx",
+        "apps/web/__tests__/ArchitectureViewerClient.test.tsx",
+        "apps/web/stories/ArchitectureViewer.stories.tsx",
+        "apps/web/package.json"
     ],
     "screenshots": {
-        "homepage_dark": "c203319ac38ce70d274d027422223eea83f074e867ca31adf8c5091134a107b2",
-        "homepage_light": "fa6de9ea44c44344f21b1741c0b76699cbe4415eaaebfc6b1ceae030e57fe4a6",
-        "project_knitibot": "835d431b58e378f9c67d2b17baeb631bc5d073254c192bdf70905c6d9efaf011"
+        "homepage_dark": "96987441acb3858f509f3d4c58ac89a19473d9613de01237052e8f2bacef1998",
+        "homepage_light": "12ae313bd53460af84efbf7b1528d38608512a2a6697fc2531bb4ffbfbbe7727",
+        "project_knitibot": "2dacd882ee391c1ed38fd28f4374e776c37445ee371c405062c09a274340591e",
+        "project_inquiro": "80cb07ebd323343a6e61171c1d33afbfd1055568e7240736a7cc85d2274e7be7",
+        "project_elysium-ai": "e0a027724e6d8438073fc7a4166e3f16831d8d7102ec6ea82ef8b82989d23aca"
     },
     "pdfs": {
         "resume_designer": "artifacts/resume_designer.pdf"
     },
     "test_summary": {
         "unit_pass": true,
-        "e2e_pass": true,
+        "e2e_pass": null,
         "lighthouse": null
     },
     "checksums": {
-        "homepage_dark.png": "c203319ac38ce70d274d027422223eea83f074e867ca31adf8c5091134a107b2",
-        "homepage_light.png": "fa6de9ea44c44344f21b1741c0b76699cbe4415eaaebfc6b1ceae030e57fe4a6",
-        "project_knitibot.png": "835d431b58e378f9c67d2b17baeb631bc5d073254c192bdf70905c6d9efaf011",
-        "resume_designer.pdf": "3d7038a71dfbf530d1bed217c22e476dbc4257a9efba0243e6e2ddbf0ea381b2"
+        "homepage_dark.png": "96987441acb3858f509f3d4c58ac89a19473d9613de01237052e8f2bacef1998",
+        "homepage_light.png": "12ae313bd53460af84efbf7b1528d38608512a2a6697fc2531bb4ffbfbbe7727",
+        "project_elysium-ai.png": "e0a027724e6d8438073fc7a4166e3f16831d8d7102ec6ea82ef8b82989d23aca",
+        "project_inquiro.png": "80cb07ebd323343a6e61171c1d33afbfd1055568e7240736a7cc85d2274e7be7",
+        "project_knitibot.png": "2dacd882ee391c1ed38fd28f4374e776c37445ee371c405062c09a274340591e",
+        "resume_designer.pdf": "7fd134a8f2c82409cce2f691e51e65f2edb683c38b19526c38bc32d539471d2f"
     },
     "source_resume_path": "jeeva-portfolio/JeevaAnanthV.pdf",
-    "notes": "Implemented HeroCanvas with R3F. Migrated PDF/Screenshot generation to Playwright. Generated artifacts."
+    "notes": "Implemented ArchitectureViewer. Generated content and artifacts. Fixed 404 issue with dynamic routes in Next.js 15+."
 }

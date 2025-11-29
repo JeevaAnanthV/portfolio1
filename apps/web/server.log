@@ -1,22 +1,70 @@
 nohup: ignoring input
 
-> web@0.1.0 start
-> next start
+> web@0.1.0 dev
+> next dev
 
-   ▲ Next.js 16.0.5
-   - Local:         http://localhost:3000
-   - Network:       http://192.168.0.76:3000
-
- ✓ Starting...
  ⚠ `eslint` configuration in next.config.js is no longer supported. See more info here: https://nextjs.org/docs/app/api-reference/cli/next#next-lint-options
  ⚠ Invalid next.config.js options detected: 
  ⚠     Unrecognized key(s) in object: 'eslint'
  ⚠ See more info here: https://nextjs.org/docs/messages/invalid-next-config
  ⚠ Warning: Next.js inferred your workspace root, but it may not be correct.
  We detected multiple lockfiles and selected the directory of /home/jeeva/Music/portfolio/jeeva-portfolio/package-lock.json as the root directory.
- To silence this warning, set `outputFileTracingRoot` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
-   See https://nextjs.org/docs/app/api-reference/config/next-config-js/output#caveats for more information.
+ To silence this warning, set `turbopack.root` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/turbopack#root-directory for more information.
  Detected additional lockfiles: 
    * /home/jeeva/Music/portfolio/jeeva-portfolio/apps/web/package-lock.json
 
- ✓ Ready in 184ms
+   ▲ Next.js 16.0.5 (Turbopack)
+   - Local:         http://localhost:3000
+   - Network:       http://192.168.0.76:3000
+
+ ✓ Starting...
+[baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+ ✓ Ready in 486ms
+Error: Route "/projects/[slug]" used `params.slug`. `params` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ProjectPage (src/app/projects/[slug]/page.tsx:8:13)
+   6 |
+   7 | export default function ProjectPage({ params }: { params: { slug: string } }) {
+>  8 |     const { slug } = params;
+     |             ^
+   9 |     const validProjects = ['knitibot', 'inquiro', 'elysium-ai'];
+  10 |
+  11 |     if (!validProjects.includes(slug)) {
+ HEAD /projects/knitibot 404 in 3.5s (compile: 3.3s, render: 229ms)
+ GET / 200 in 1300ms (compile: 1092ms, render: 208ms)
+Error: Route "/projects/[slug]" used `params.slug`. `params` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ProjectPage (src/app/projects/[slug]/page.tsx:8:13)
+   6 |
+   7 | export default function ProjectPage({ params }: { params: { slug: string } }) {
+>  8 |     const { slug } = params;
+     |             ^
+   9 |     const validProjects = ['knitibot', 'inquiro', 'elysium-ai'];
+  10 |
+  11 |     if (!validProjects.includes(slug)) {
+ GET /projects/knitibot 404 in 140ms (compile: 42ms, render: 98ms)
+Error: Route "/projects/[slug]" used `params.slug`. `params` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ProjectPage (src/app/projects/[slug]/page.tsx:8:13)
+   6 |
+   7 | export default function ProjectPage({ params }: { params: { slug: string } }) {
+>  8 |     const { slug } = params;
+     |             ^
+   9 |     const validProjects = ['knitibot', 'inquiro', 'elysium-ai'];
+  10 |
+  11 |     if (!validProjects.includes(slug)) {
+ GET /projects/inquiro 404 in 92ms (compile: 29ms, render: 63ms)
+Error: Route "/projects/[slug]" used `params.slug`. `params` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ProjectPage (src/app/projects/[slug]/page.tsx:8:13)
+   6 |
+   7 | export default function ProjectPage({ params }: { params: { slug: string } }) {
+>  8 |     const { slug } = params;
+     |             ^
+   9 |     const validProjects = ['knitibot', 'inquiro', 'elysium-ai'];
+  10 |
+  11 |     if (!validProjects.includes(slug)) {
+ GET /projects/elysium-ai 404 in 87ms (compile: 30ms, render: 57ms)
+ ✓ Compiled in 3ms
+ HEAD /projects/knitibot 200 in 254ms (compile: 122ms, render: 132ms)
+ GET / 200 in 46ms (compile: 3ms, render: 43ms)
+ GET /projects/knitibot 200 in 84ms (compile: 32ms, render: 52ms)
+ GET /projects/inquiro 200 in 70ms (compile: 28ms, render: 42ms)
+ GET /projects/elysium-ai 200 in 60ms (compile: 26ms, render: 34ms)
