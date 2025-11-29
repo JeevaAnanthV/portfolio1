@@ -7,9 +7,9 @@ export default function HomePage() {
       {/* Hero */}
       <section className="relative w-full h-[70vh]">
         <HeroCanvas />
-        <div className="absolute bottom-10 left-0 flex flex-col gap-2">
-          <h1 className="text-6xl font-bold tracking-tight">Jeeva Ananth V</h1>
-          <p className="text-2xl text-neutral-300">AI/ML Engineer • Deep-Tech Builder • RAG Systems Architect</p>
+        <div className="absolute bottom-10 left-8">
+          <h1 className="text-6xl font-bold">Jeeva Ananth V</h1>
+          <p className="text-lg opacity-80">AI/ML Engineer • Deep-Tech Builder</p>
         </div>
       </section>
 

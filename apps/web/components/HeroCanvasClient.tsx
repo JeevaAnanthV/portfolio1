@@ -47,8 +47,18 @@ export default function HeroCanvasClient() {
     const [isMobile, setIsMobile] = useState(false);
     const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
     const [isPaused, setIsPaused] = useState(false);
+    const [webglSupported, setWebglSupported] = useState(true);
 
     useEffect(() => {
+        // Check WebGL support
+        try {
+            const canvas = document.createElement('canvas');
+            const gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+            if (!gl) setWebglSupported(false);
+        } catch (e) {
+            setWebglSupported(false);
+        }
+
         const mobileQuery = window.matchMedia('(max-width: 768px)');
         setIsMobile(mobileQuery.matches);
 
@@ -60,8 +70,8 @@ export default function HeroCanvasClient() {
         return () => mobileQuery.removeEventListener('change', handleResize);
     }, []);
 
-    if (prefersReducedMotion) {
-        return null; // Fallback handled by parent
+    if (!webglSupported || prefersReducedMotion) {
+        return <img src="/hero-fallback.webp" alt="Hero fallback" className="hero-fallback" />;
     }
 
     // Adaptive DPR for performance

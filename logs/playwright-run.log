@@ -1,18 +1,4 @@
-Could not screenshot inquiro: page.goto: Timeout 5000ms exceeded.
-Call log:
-  - navigating to "http://localhost:3000/projects/inquiro", waiting until "networkidle"
-
-Could not screenshot elysium-ai: page.goto: Timeout 5000ms exceeded.
-Call log:
-  - navigating to "http://localhost:3000/projects/elysium-ai", waiting until "networkidle"
-
 Generated one-pager for knitibot
-Could not generate one-pager for inquiro: page.goto: Timeout 10000ms exceeded.
-Call log:
-  - navigating to "http://localhost:3000/projects/inquiro", waiting until "networkidle"
-
-Could not generate one-pager for elysium-ai: page.goto: Timeout 10000ms exceeded.
-Call log:
-  - navigating to "http://localhost:3000/projects/elysium-ai", waiting until "networkidle"
-
+Generated one-pager for inquiro
+Generated one-pager for elysium-ai
 Artifacts written to /home/jeeva/Music/portfolio/jeeva-portfolio/artifacts

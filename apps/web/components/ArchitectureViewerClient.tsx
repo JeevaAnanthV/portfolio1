@@ -59,28 +59,39 @@ export default function ArchitectureViewerClient({ url }: { url: string }) {
     const [data, setData] = useState<ArchitectureData | null>(null);
     const [activeLayer, setActiveLayer] = useState<string | null>(null);
     const [snippetContent, setSnippetContent] = useState<string>('');
-
-    // Normalize URL to ensure absolute path
-    const fetchUrl = url.startsWith('/') ? url : `/${url.replace(/^\/+/, '')}`;
+    const [error, setError] = useState<string | null>(null);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
+        let mounted = true;
+        // Use absolute URL for fetch
+        const fetchUrl = new URL(url, typeof window !== 'undefined' ? window.location.origin : 'http://localhost:3000').toString();
+        
         fetch(fetchUrl)
             .then((res) => {
                 if (!res.ok) {
-                    throw new Error(`Failed to fetch architecture: ${res.status} ${res.statusText}`);
+                    throw new Error(`Failed to fetch architecture JSON: ${res.status}`);
                 }
                 return res.json();
             })
             .then((d) => {
-                setData(d);
-                if (d.layers && d.layers.length > 0) {
-                    setActiveLayer(d.layers[0].id);
+                if (mounted) {
+                    setData(d);
+                    if (d.layers && d.layers.length > 0) {
+                        setActiveLayer(d.layers[0].id);
+                    }
+                    setLoading(false);
                 }
             })
-            .catch((err) => {
-                console.error('Error loading architecture data:', err);
+            .catch((e) => {
+                if (mounted) {
+                    setError(String(e));
+                    setLoading(false);
+                }
             });
-    }, [fetchUrl]);
+        
+        return () => { mounted = false; };
+    }, [url]);
 
     useEffect(() => {
         if (activeLayer && data) {
@@ -109,6 +120,23 @@ export default function ArchitectureViewerClient({ url }: { url: string }) {
         }
     }, [activeLayer, data, fetchUrl]);
 
+    if (loading) {
+        return (
+            <div data-testid="architecture-viewer-loading" className="p-4 border rounded animate-pulse">
+                <div className="h-4 bg-muted rounded w-3/4 mb-2"></div>
+                <div className="h-4 bg-muted rounded w-1/2"></div>
+            </div>
+        );
+    }
+    
+    if (error) {
+        return (
+            <div data-testid="architecture-error" className="p-4 border rounded bg-red-900 text-white">
+                Error loading: {error}
+            </div>
+        );
+    }
+    
     if (!data) {
         return (
             <div data-testid="architecture-viewer-loading" className="p-4 border rounded animate-pulse">

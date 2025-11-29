@@ -1,4 +1,5 @@
-import './globals.css';
+import './globals.css'; // <- must be relative to this file
+import React from 'react';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -9,16 +10,14 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className="bg-black text-white antialiased min-h-screen">
-        <main className="mx-auto max-w-7xl px-8 py-16">
-          {children}
-        </main>
-        {/* Client error collector for debugging */}
+      <body className="bg-background text-foreground antialiased">
+        {/* Simple client-side error capture for debugging */}
         <script
           dangerouslySetInnerHTML={{
-            __html: `window.__clientErrors__=[]; window.onerror=(m,s,l) => { window.__clientErrors__.push({message:m,source:s,line:l}); };`,
+            __html: `window.__clientErrors__=[]; window.onerror=(m,s,l)=>{window.__clientErrors__.push({message:m,source:s,line:l})};`
           }}
         />
+        {children}
       </body>
     </html>
   );

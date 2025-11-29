@@ -10,11 +10,9 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
     }
 
     return (
-        <main className="flex min-h-screen flex-col items-center p-8 bg-background text-foreground">
-            <h1 className="text-4xl font-bold mb-8 capitalize">{slug} Architecture</h1>
-            <div className="w-full max-w-5xl">
-                <ArchitectureViewer url={`/content/projects/${slug}/architecture.json`} />
-            </div>
+        <main className="container">
+            <h1 className="text-4xl font-bold mb-6 capitalize">{slug} Architecture</h1>
+            <ArchitectureViewer url={`/content/projects/${slug}/architecture.json`} />
         </main>
     );
 }
