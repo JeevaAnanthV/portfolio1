@@ -1,0 +1,215 @@
+{
+    "basics": {
+        "name": "Jeeva Ananth V",
+        "label": "Software Engineer (Machine Learning)",
+        "email": "jeevaananthv@gmail.com",
+        "phone": "+91-8667072227",
+        "website": "https://github.com/JeevaAnanthV",
+        "summary": "Software Engineer (Machine Learning) specializing in Generative AI, NLP, and Agentic AI systems. Experienced in architecting, training, and deploying LLM-powered, RAG-based enterprise applications including KnitiBot, leveraging pgvector and Kafka-driven data pipelines for real-time knowledge orchestration. Skilled in production-grade ML engineering involving model optimization (TensorRT, ONNX), secure FastAPI microservices, and on-device inference on Raspberry Pi 5. Demonstrated success delivering measurable performance gains including 20% latency reduction and 15% accuracy improvement. Currently advancing multi-agent MCP-enabled architectures for emotionally intelligent AI systems.",
+        "profiles": [
+            {
+                "network": "LinkedIn",
+                "url": "https://linkedin.com/in/JeevaAnanthV",
+                "username": "JeevaAnanthV"
+            },
+            {
+                "network": "GitHub",
+                "url": "https://github.com/JeevaAnanthV",
+                "username": "JeevaAnanthV"
+            }
+        ]
+    },
+    "skills": [
+        {
+            "name": "Machine Learning & AI",
+            "keywords": [
+                "Deep Learning",
+                "Transfer Learning",
+                "Model Optimization",
+                "TensorRT",
+                "ONNX"
+            ]
+        },
+        {
+            "name": "Generative AI & NLP",
+            "keywords": [
+                "LLMs (GPT, LLaMA, Falcon)",
+                "LangChain",
+                "RAG",
+                "Hugging Face Transformers",
+                "Embeddings",
+                "Vector DBs (FAISS, Pinecone, Milvus, pgvector)",
+                "BERT",
+                "NER"
+            ]
+        },
+        {
+            "name": "Computer Vision",
+            "keywords": [
+                "YOLOv8",
+                "OpenCV",
+                "Image Segmentation",
+                "Object Detection",
+                "Tracking",
+                "Anomaly Detection"
+            ]
+        },
+        {
+            "name": "MLOps & Data Engineering",
+            "keywords": [
+                "Kafka",
+                "Airflow",
+                "Redis",
+                "PostgreSQL",
+                "Docker",
+                "Kubernetes",
+                "MLflow",
+                "W&B",
+                "CI/CD",
+                "AWS"
+            ]
+        },
+        {
+            "name": "Backend Engineering",
+            "keywords": [
+                "FastAPI",
+                "Flask",
+                "REST APIs",
+                "OAuth2",
+                "Celery",
+                "Microservices",
+                "API Security"
+            ]
+        },
+        {
+            "name": "Programming & Data Tools",
+            "keywords": [
+                "Python",
+                "SQL",
+                "Pandas",
+                "NumPy",
+                "Scikit-learn",
+                "TensorFlow",
+                "PyTorch",
+                "Seaborn",
+                "Matplotlib"
+            ]
+        }
+    ],
+    "work": [
+        {
+            "name": "Count AI",
+            "position": "Software Engineer",
+            "location": "Coimbatore, India",
+            "startDate": "2024-07",
+            "endDate": "Present",
+            "summary": "Developed KnitiBot, an enterprise multimodal RAG chatbot backed by PostgreSQL + pgvector. Implemented scalable real-time data pipelines using Apache Kafka. Architected secure FastAPI + PostgreSQL microservices. Contributed to SuperNova, a compact AI-powered knitting monitoring machine.",
+            "highlights": [
+                "Developed KnitiBot, an enterprise multimodal RAG chatbot backed by PostgreSQL + pgvector, integrating internal documents and knowledge resources into a unified interface and significantly reducing manual lookup and overhead across teams.",
+                "Implemented scalable real-time data pipelines using Apache Kafka to stream, preprocess, and index data for downstream ML services and RAG-based applications.",
+                "Architected secure FastAPI + PostgreSQL microservices with JWT/OAuth2 for model serving, document ingestion, and user management, improving reliability and scalability of production AI systems.",
+                "Contributed to SuperNova, a compact AI-powered knitting monitoring machine built on Raspberry Pi 5 with an AI accelerator HAT, running optimized on-device ML inference for pattern detection and machine control.",
+                "Containerized and deployed ML inference services using Docker with scalable production deployment workflows, enabling resilient rollouts, observability, and high-availability model serving."
+            ]
+        },
+        {
+            "name": "Terv Pro / Top Freshers",
+            "position": "Research Associate",
+            "location": "Chennai, India",
+            "startDate": "2024-02",
+            "endDate": "2024-06",
+            "summary": "Delivered classes and workshops on Python, ML, DL, AI, and GenAI. Implemented proof-of-concept LLM + RAG applications.",
+            "highlights": [
+                "Delivered classes and workshops on Python, Machine Learning, Deep Learning, Data Science, AI, and Generative AI to over 500+ students across multiple colleges, contributing to improved technical readiness and campus placement outcomes.",
+                "Implemented proof-of-concept LLM + RAG applications aligned with recent ML/AI research papers and designed hands-on NLP and Computer Vision projects to strengthen applied understanding and implementation skills."
+            ]
+        },
+        {
+            "name": "Pantech E-Learning & NSIC",
+            "position": "Machine Learning Intern",
+            "location": "Chennai / Remote",
+            "startDate": "2023-06",
+            "endDate": "2023-08",
+            "summary": "Implemented ML workflows in TensorFlow and Scikit-learn. Studied ML deployment fundamentals.",
+            "highlights": [
+                "Implemented ML workflows in TensorFlow and Scikit-learn across diverse datasets, including preprocessing automation and evaluation.",
+                "Studied ML deployment fundamentals and contributed to reproducible experimentation through structured documentation."
+            ]
+        }
+    ],
+    "education": [
+        {
+            "institution": "Government College of Engineering, Erode",
+            "area": "Electronics and Communication Engineering",
+            "studyType": "B.E.",
+            "startDate": "2021-08",
+            "endDate": "2024-05",
+            "location": "Tamil Nadu, India"
+        },
+        {
+            "institution": "Rane Polytechnic Technical Campus, Trichy",
+            "area": "Mechatronics Engineering",
+            "studyType": "Diploma",
+            "startDate": "2018-06",
+            "endDate": "2021-05",
+            "location": "Tamil Nadu, India"
+        }
+    ],
+    "projects": [
+        {
+            "name": "KnitiBot",
+            "description": "Enterprise multimodal RAG chatbot backed by PostgreSQL + pgvector, integrating internal documents and knowledge resources into a unified interface.",
+            "keywords": [
+                "RAG",
+                "PostgreSQL",
+                "pgvector",
+                "Kafka",
+                "FastAPI",
+                "Enterprise"
+            ],
+            "highlights": [
+                "Significantly reduced manual lookup and overhead across teams.",
+                "Integrated internal documents and knowledge resources into a unified interface.",
+                "Backed by PostgreSQL + pgvector and Kafka-driven data pipelines."
+            ],
+            "kpis": {
+                "latency_reduction": "20%",
+                "accuracy_improvement": "15%"
+            }
+        },
+        {
+            "name": "Elysium AI",
+            "description": "Emotionally Intelligent Multi-Agent Architecture (Open-Source in Progress). Engineering a self-evolving, emotionally aware multi-agent system with adaptive behavior based on real-time affective state embeddings.",
+            "keywords": [
+                "Multi-Agent",
+                "MCP",
+                "Emotional Intelligence",
+                "RAG",
+                "Affective Computing"
+            ],
+            "year": "2025",
+            "highlights": [
+                "Integrating a production-focused RAG pipeline + MCP communication for cognitive and emotional context sharing during coordinated decision-making.",
+                "Developing new evaluation metrics (affective alignment, resonance mapping) to measure emotional-context effectiveness beyond standard NLP metrics."
+            ]
+        },
+        {
+            "name": "Inquiro",
+            "description": "Multimodal RAG Chatbot System. Developed chatbot integrating PDF, web, and video sources using LangChain + Google Generative AI.",
+            "keywords": [
+                "Multimodal RAG",
+                "LangChain",
+                "Google GenAI",
+                "ChromaDB"
+            ],
+            "year": "2024",
+            "highlights": [
+                "Implemented Retriever-Augmented Generation (RAG) with Chroma Vector DB.",
+                "Improved contextual accuracy by 90%."
+            ],
+            "kpis": {
+                "accuracy_improvement": "90%"
+            }
+        }
+    ]
+}

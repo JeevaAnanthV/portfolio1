@@ -1,0 +1,12 @@
+{
+    "name": "@jeeva/r3f-shared",
+    "version": "0.0.0",
+    "main": "scenes/index.tsx",
+    "types": "scenes/index.tsx",
+    "dependencies": {
+        "react": "^19.0.0",
+        "@react-three/fiber": "^9.0.0",
+        "@react-three/drei": "^10.0.0",
+        "three": "^0.181.0"
+    }
+}
