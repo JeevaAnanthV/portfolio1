@@ -1,11 +1,13 @@
 
 Running 1 test using 1 worker
 
-(node:314281) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(node:322808) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
 (Use `node --trace-warnings ...` to show where the warning was created)
-(node:314281) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(node:322808) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
 (Use `node --trace-warnings ...` to show where the warning was created)
 Console errors: [
+  [32m'Failed to load resource: the server responded with a status of 500 (Internal Server Error)'[39m,
+  [32m'Failed to load resource: the server responded with a status of 500 (Internal Server Error)'[39m,
   [32m'Failed to load resource: the server responded with a status of 500 (Internal Server Error)'[39m,
   [32m'Failed to load resource: the server responded with a status of 500 (Internal Server Error)'[39m,
   [32m'Failed to load resource: the server responded with a status of 500 (Internal Server Error)'[39m,
@@ -16,7 +18,7 @@ Console errors: [
   [32m'Failed to load resource: the server responded with a status of 500 (Internal Server Error)'[39m
 ]
 Page body text (first 500 chars): knitibot ArchitectureLoading Architecture...(self.__next_f=self.__next_f||[]).push([0])self.__next_f.push([1,"1:\"$Sreact.fragment\"\n2:I[10291,[\"/_next/static/chunks/603dadf22349f31d.js\",\"/_next/static/chunks/63958b6b50045e32.js\"],\"default\"]\n3:I[2968,[\"/_next/static/chunks/603dadf22349f31d.js\",\"/_next/static/chunks/63958b6b50045e32.js\"],\"default\"]\n5:I[82520,[\"/_next/static/chunks/603dadf22349f31d.js\",\"/_next/static/chunks/63958b6b50045e32.js\"],\"OutletBoundary\"]\n6:\"$Sreact.
-  ✘  1 [chromium] › e2e/architecture.spec.ts:3:5 › homepage & projects load and architecture viewer toggles (4.3s)
+  ✘  1 [chromium] › e2e/architecture.spec.ts:3:5 › homepage & projects load and architecture viewer toggles (4.2s)
 
 
   1) [chromium] › e2e/architecture.spec.ts:3:5 › homepage & projects load and architecture viewer toggles 
