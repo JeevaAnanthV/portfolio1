@@ -1,27 +1,27 @@
 {
-    "agent_id": "ANTIGRAVITY_PHASE1_INIT",
-    "timestamp": "2025-11-29T12:15:00+05:30",
-    "branch": "ag/phase1/init",
+    "agent_id": "ANTIGRAVITY_PHASE1_HERO",
+    "timestamp": "2025-11-29T12:30:00+05:30",
+    "branch": "ag/phase1/hero",
     "changed_files": [
-        "content/resume.parsed.json",
-        "scripts/parse_resume.js",
-        "apps/web/package.json",
-        "apps/web/tailwind.config.js",
-        "apps/web/postcss.config.js",
-        "apps/web/styles/globals.css",
-        "packages/ui/package.json",
-        "packages/r3f-shared/package.json"
+        "apps/web/components/HeroCanvas.tsx",
+        "apps/web/components/HeroCanvasClient.tsx",
+        "apps/web/public/ja-monogram.svg",
+        "apps/web/public/hero-fallback.webp",
+        "apps/web/__tests__/HeroCanvas.test.tsx",
+        "apps/web/stories/HeroCanvas.stories.tsx",
+        "apps/web/jest.config.js",
+        "apps/web/jest.setup.js"
     ],
     "screenshots": {},
     "pdfs": {},
     "test_summary": {
-        "unit_pass": null,
+        "unit_pass": true,
         "e2e_pass": null,
         "lighthouse": null
     },
     "checksums": {
-        "resume.parsed.json": "generated_from_pdf"
+        "hero-fallback.webp": "dummy_checksum"
     },
     "source_resume_path": "jeeva-portfolio/JeevaAnanthV.pdf",
-    "notes": "Parsed resume content using pdftotext and structured into JSON. Initialized monorepo structure and Next.js app."
+    "notes": "Implemented HeroCanvas with R3F, progressive LOD (simulated), and fallback. Added unit tests and Storybook story."
 }
