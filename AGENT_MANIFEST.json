@@ -1,6 +1,6 @@
 {
     "agent_id": "ANTIGRAVITY_PHASE1_HERO",
-    "timestamp": "2025-11-29T12:40:00+05:30",
+    "timestamp": "2025-11-29T13:00:00+05:30",
     "branch": "ag/phase1/hero",
     "changed_files": [
         "apps/web/components/HeroCanvas.tsx",
@@ -12,18 +12,29 @@
         "apps/web/jest.config.js",
         "apps/web/jest.setup.js",
         "apps/web/package.json",
-        "scripts/build_pdf_playwright.js"
+        "apps/web/next.config.js",
+        "scripts/build_pdf_playwright.js",
+        "apps/web/src/app/page.tsx"
     ],
-    "screenshots": {},
-    "pdfs": {},
+    "screenshots": {
+        "homepage_dark": "c203319ac38ce70d274d027422223eea83f074e867ca31adf8c5091134a107b2",
+        "homepage_light": "fa6de9ea44c44344f21b1741c0b76699cbe4415eaaebfc6b1ceae030e57fe4a6",
+        "project_knitibot": "835d431b58e378f9c67d2b17baeb631bc5d073254c192bdf70905c6d9efaf011"
+    },
+    "pdfs": {
+        "resume_designer": "artifacts/resume_designer.pdf"
+    },
     "test_summary": {
         "unit_pass": true,
-        "e2e_pass": null,
+        "e2e_pass": true,
         "lighthouse": null
     },
     "checksums": {
-        "hero-fallback.webp": "dummy_checksum"
+        "homepage_dark.png": "c203319ac38ce70d274d027422223eea83f074e867ca31adf8c5091134a107b2",
+        "homepage_light.png": "fa6de9ea44c44344f21b1741c0b76699cbe4415eaaebfc6b1ceae030e57fe4a6",
+        "project_knitibot.png": "835d431b58e378f9c67d2b17baeb631bc5d073254c192bdf70905c6d9efaf011",
+        "resume_designer.pdf": "3d7038a71dfbf530d1bed217c22e476dbc4257a9efba0243e6e2ddbf0ea381b2"
     },
     "source_resume_path": "jeeva-portfolio/JeevaAnanthV.pdf",
-    "notes": "Implemented HeroCanvas with R3F. Migrated PDF/Screenshot generation to Playwright. Fixed React warnings in unit tests."
+    "notes": "Implemented HeroCanvas with R3F. Migrated PDF/Screenshot generation to Playwright. Generated artifacts."
 }
