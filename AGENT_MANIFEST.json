@@ -1,23 +1,19 @@
 {
-    "agent_id": "ANTIGRAVITY_PHASE1_LAYOUT_FIX",
-    "timestamp": "2025-11-29T15:00:00+05:30",
+    "agent_id": "ANTIGRAVITY_PHASE1_LAYOUT_FIX_HYDRATION",
+    "timestamp": "2025-11-29T16:00:00+05:30",
     "branch": "ag/phase1/layout-fix",
     "changed_files": [
-        "apps/web/src/app/globals.css",
-        "apps/web/src/app/layout.tsx",
-        "apps/web/src/app/page.tsx",
-        "apps/web/src/app/projects/[slug]/page.tsx",
-        "apps/web/components/ArchitectureViewer.tsx",
         "apps/web/components/ArchitectureViewerClient.tsx",
-        "apps/web/components/StackGraph.tsx",
-        "apps/web/components/StackGraphClient.tsx",
+        "apps/web/src/app/layout.tsx",
+        "apps/web/src/app/projects/[slug]/page.tsx",
+        "apps/web/playwright.config.ts",
+        "apps/web/playwright.global-setup.ts",
+        "apps/web/jest.setup.js",
         "apps/web/__tests__/StackGraph.test.tsx",
-        "apps/web/stories/StackGraph.stories.tsx",
-        "apps/web/tailwind.config.js",
-        "apps/web/tsconfig.json",
+        "apps/web/__tests__/ArchitectureViewerClient.test.tsx",
         "apps/web/e2e/architecture.spec.ts",
-        "package.json",
-        "scripts/generate_stackgraph_screenshots.js"
+        "apps/web/jest.config.js",
+        "apps/web/package.json"
     ],
     "screenshots": {
         "homepage_dark": "d6af85ea4c4e88a72f18354a5059328ce411e305a7eb02932505eec56009192b",
@@ -33,8 +29,9 @@
     },
     "test_summary": {
         "unit_pass": true,
-        "e2e_pass": true,
-        "lighthouse": null
+        "e2e_pass": false,
+        "lighthouse": null,
+        "notes": "E2E failing due to ArchitectureViewer not hydrating in production. Component shows loading state but client chunks return 500 errors. All unit tests passing."
     },
     "checksums": {
         "homepage_dark.png": "d6af85ea4c4e88a72f18354a5059328ce411e305a7eb02932505eec56009192b",
@@ -47,5 +44,5 @@
         "stackgraph-light.png": "d6af85ea4c4e88a72f18354a5059328ce411e305a7eb02932505eec56009192b"
     },
     "source_resume_path": "jeeva-portfolio/JeevaAnanthV.pdf",
-    "notes": "Phase 1 Global Layout Repair + StackGraph: Fixed globals.css, layout.tsx, page.tsx, ArchitectureViewer (removed debug dumps), Tailwind/PostCSS config, Next.js dynamic params. Implemented StackGraph component with force-directed graph visualization of tech stack. All styles now applied correctly. Build successful. Tests passing."
+    "notes": "Phase 1 Global Layout Repair + StackGraph + Test Fixes: Fixed globals.css, layout.tsx, page.tsx, ArchitectureViewer (removed debug dumps, added error boundary), Tailwind/PostCSS config, Next.js dynamic params. Implemented StackGraph component. Fixed all unit tests (polyfill, mocks, test-ids). E2E test infrastructure fixed but component hydration issue in production persists (500 errors on client chunk loading). All unit tests passing (7/7)."
 }

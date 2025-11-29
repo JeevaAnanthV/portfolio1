@@ -13,6 +13,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main className="mx-auto max-w-7xl px-8 py-16">
           {children}
         </main>
+        {/* Client error collector for debugging */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `window.__clientErrors__=[]; window.onerror=(m,s,l) => { window.__clientErrors__.push({message:m,source:s,line:l}); };`,
+          }}
+        />
       </body>
     </html>
   );
