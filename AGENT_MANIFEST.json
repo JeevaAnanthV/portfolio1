@@ -1,6 +1,6 @@
 {
     "agent_id": "ANTIGRAVITY_PHASE1_HERO",
-    "timestamp": "2025-11-29T12:30:00+05:30",
+    "timestamp": "2025-11-29T12:40:00+05:30",
     "branch": "ag/phase1/hero",
     "changed_files": [
         "apps/web/components/HeroCanvas.tsx",
@@ -10,7 +10,9 @@
         "apps/web/__tests__/HeroCanvas.test.tsx",
         "apps/web/stories/HeroCanvas.stories.tsx",
         "apps/web/jest.config.js",
-        "apps/web/jest.setup.js"
+        "apps/web/jest.setup.js",
+        "apps/web/package.json",
+        "scripts/build_pdf_playwright.js"
     ],
     "screenshots": {},
     "pdfs": {},
@@ -23,5 +25,5 @@
         "hero-fallback.webp": "dummy_checksum"
     },
     "source_resume_path": "jeeva-portfolio/JeevaAnanthV.pdf",
-    "notes": "Implemented HeroCanvas with R3F, progressive LOD (simulated), and fallback. Added unit tests and Storybook story."
+    "notes": "Implemented HeroCanvas with R3F. Migrated PDF/Screenshot generation to Playwright. Fixed React warnings in unit tests."
 }

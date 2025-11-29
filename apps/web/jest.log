@@ -1,0 +1,80 @@
+
+> web@0.1.0 test:unit
+> jest
+
+[baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+  console.error
+    Received `true` for a non-boolean attribute `fill`.
+    
+    If you want to write it to the DOM, pass a string instead: fill="true" or fill={value.toString()}.
+
+      16 | describe('HeroCanvas', () => {
+      17 |     it('renders without crashing', () => {
+    > 18 |         render(<HeroCanvas />);
+         |               ^
+      19 |         expect(screen.getByTestId('hero-canvas-client')).toBeInTheDocument();
+      20 |     });
+      21 |
+
+      at validateProperty (node_modules/react-dom/cjs/react-dom-client.development.js:3070:27)
+      at warnUnknownProperties (node_modules/react-dom/cjs/react-dom-client.development.js:3146:9)
+      at validatePropertiesInDevelopment (node_modules/react-dom/cjs/react-dom-client.development.js:19868:9)
+      at setInitialProperties (node_modules/react-dom/cjs/react-dom-client.development.js:20491:7)
+      at completeWork (node_modules/react-dom/cjs/react-dom-client.development.js:12662:18)
+      at runWithFiberInDEV (node_modules/react-dom/cjs/react-dom-client.development.js:874:13)
+      at completeUnitOfWork (node_modules/react-dom/cjs/react-dom-client.development.js:17777:19)
+      at performUnitOfWork (node_modules/react-dom/cjs/react-dom-client.development.js:17658:11)
+      at workLoopSync (node_modules/react-dom/cjs/react-dom-client.development.js:17469:41)
+      at renderRootSync (node_modules/react-dom/cjs/react-dom-client.development.js:17450:11)
+      at performWorkOnRoot (node_modules/react-dom/cjs/react-dom-client.development.js:16504:11)
+      at performWorkOnRootViaSchedulerTask (node_modules/react-dom/cjs/react-dom-client.development.js:18957:7)
+      at flushActQueue (node_modules/react/cjs/react.development.js:590:34)
+      at process.env.NODE_ENV.exports.act (node_modules/react/cjs/react.development.js:884:10)
+      at node_modules/@testing-library/react/dist/act-compat.js:47:25
+      at renderRoot (node_modules/@testing-library/react/dist/pure.js:190:26)
+      at render (node_modules/@testing-library/react/dist/pure.js:292:10)
+      at Object.<anonymous> (__tests__/HeroCanvas.test.tsx:18:15)
+
+  console.error
+    Received `true` for a non-boolean attribute `priority`.
+    
+    If you want to write it to the DOM, pass a string instead: priority="true" or priority={value.toString()}.
+
+      16 | describe('HeroCanvas', () => {
+      17 |     it('renders without crashing', () => {
+    > 18 |         render(<HeroCanvas />);
+         |               ^
+      19 |         expect(screen.getByTestId('hero-canvas-client')).toBeInTheDocument();
+      20 |     });
+      21 |
+
+      at validateProperty (node_modules/react-dom/cjs/react-dom-client.development.js:3070:27)
+      at warnUnknownProperties (node_modules/react-dom/cjs/react-dom-client.development.js:3146:9)
+      at validatePropertiesInDevelopment (node_modules/react-dom/cjs/react-dom-client.development.js:19868:9)
+      at setInitialProperties (node_modules/react-dom/cjs/react-dom-client.development.js:20491:7)
+      at completeWork (node_modules/react-dom/cjs/react-dom-client.development.js:12662:18)
+      at runWithFiberInDEV (node_modules/react-dom/cjs/react-dom-client.development.js:874:13)
+      at completeUnitOfWork (node_modules/react-dom/cjs/react-dom-client.development.js:17777:19)
+      at performUnitOfWork (node_modules/react-dom/cjs/react-dom-client.development.js:17658:11)
+      at workLoopSync (node_modules/react-dom/cjs/react-dom-client.development.js:17469:41)
+      at renderRootSync (node_modules/react-dom/cjs/react-dom-client.development.js:17450:11)
+      at performWorkOnRoot (node_modules/react-dom/cjs/react-dom-client.development.js:16504:11)
+      at performWorkOnRootViaSchedulerTask (node_modules/react-dom/cjs/react-dom-client.development.js:18957:7)
+      at flushActQueue (node_modules/react/cjs/react.development.js:590:34)
+      at process.env.NODE_ENV.exports.act (node_modules/react/cjs/react.development.js:884:10)
+      at node_modules/@testing-library/react/dist/act-compat.js:47:25
+      at renderRoot (node_modules/@testing-library/react/dist/pure.js:190:26)
+      at render (node_modules/@testing-library/react/dist/pure.js:292:10)
+      at Object.<anonymous> (__tests__/HeroCanvas.test.tsx:18:15)
+
+PASS __tests__/HeroCanvas.test.tsx
+  HeroCanvas
+    ✓ renders without crashing (55 ms)
+    ✓ renders fallback image for mobile/no-js (5 ms)
+    ✓ renders monogram (3 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       3 passed, 3 total
+Snapshots:   0 total
+Time:        0.624 s, estimated 1 s
+Ran all test suites.
