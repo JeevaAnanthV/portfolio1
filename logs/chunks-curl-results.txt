@@ -1,0 +1,130 @@
+=== HEAD /_next/static/chunks/0a9ca1ebb503479d.js ===
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0 18249    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+HTTP/1.1 200 OK
+Cache-Control: public, max-age=31536000, immutable
+Accept-Ranges: bytes
+Last-Modified: Sat, 29 Nov 2025 09:42:34 GMT
+ETag: W/"4749-19acefe281a"
+Content-Type: application/javascript; charset=UTF-8
+Content-Length: 18249
+Vary: Accept-Encoding
+Date: Sat, 29 Nov 2025 09:42:45 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+
+
+=== HEAD /_next/static/chunks/603dadf22349f31d.js ===
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0   282    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+HTTP/1.1 200 OK
+Cache-Control: public, max-age=31536000, immutable
+Accept-Ranges: bytes
+Last-Modified: Sat, 29 Nov 2025 09:42:34 GMT
+ETag: W/"11a-19acefe281a"
+Content-Type: application/javascript; charset=UTF-8
+Content-Length: 282
+Vary: Accept-Encoding
+Date: Sat, 29 Nov 2025 09:42:45 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+
+
+=== HEAD /_next/static/chunks/63958b6b50045e32.js ===
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0 27859    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+HTTP/1.1 200 OK
+Cache-Control: public, max-age=31536000, immutable
+Accept-Ranges: bytes
+Last-Modified: Sat, 29 Nov 2025 09:42:34 GMT
+ETag: W/"6cd3-19acefe281a"
+Content-Type: application/javascript; charset=UTF-8
+Content-Length: 27859
+Vary: Accept-Encoding
+Date: Sat, 29 Nov 2025 09:42:45 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+
+
+=== HEAD /_next/static/chunks/8b3ee4c01d80f632.js ===
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0  293k    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+HTTP/1.1 200 OK
+Cache-Control: public, max-age=31536000, immutable
+Accept-Ranges: bytes
+Last-Modified: Sat, 29 Nov 2025 09:42:34 GMT
+ETag: W/"4944c-19acefe281a"
+Content-Type: application/javascript; charset=UTF-8
+Content-Length: 300108
+Vary: Accept-Encoding
+Date: Sat, 29 Nov 2025 09:42:45 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+
+
+=== HEAD /_next/static/chunks/9f7db09326142964.js ===
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0    21    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+HTTP/1.1 500 Internal Server Error
+Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate
+ETag: "66fci67lppl"
+Content-Type: text/plain
+Content-Length: 21
+Vary: Accept-Encoding
+Date: Sat, 29 Nov 2025 09:42:45 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+
+
+=== HEAD /_next/static/chunks/a6dad97d9634a72d.js ===
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0  109k    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+HTTP/1.1 200 OK
+Cache-Control: public, max-age=31536000, immutable
+Accept-Ranges: bytes
+Last-Modified: Sat, 29 Nov 2025 09:42:34 GMT
+ETag: W/"1b7d2-19acefe281a"
+Content-Type: application/javascript; charset=UTF-8
+Content-Length: 112594
+Vary: Accept-Encoding
+Date: Sat, 29 Nov 2025 09:42:45 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+
+
+=== HEAD /_next/static/chunks/d011264a877f49a7.js ===
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0    21    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+HTTP/1.1 500 Internal Server Error
+Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate
+ETag: "66fci67lppl"
+Content-Type: text/plain
+Content-Length: 21
+Vary: Accept-Encoding
+Date: Sat, 29 Nov 2025 09:42:45 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+
+
+=== HEAD /_next/static/chunks/turbopack-e077e6bb7fe4289e.js ===
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0    21    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+HTTP/1.1 500 Internal Server Error
+Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate
+ETag: "66fci67lppl"
+Content-Type: text/plain
+Content-Length: 21
+Vary: Accept-Encoding
+Date: Sat, 29 Nov 2025 09:42:45 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+
+

@@ -1,0 +1,61 @@
+ROOT CAUSE ANALYSIS - ArchitectureViewer Hydration Failure
+
+========================================
+CHUNK RESPONSES (from chunks-curl-results.txt)
+========================================
+
+FAILING CHUNKS (HTTP 500):
+1. /_next/static/chunks/9f7db09326142964.js - HTTP/1.1 500 Internal Server Error
+2. /_next/static/chunks/d011264a877f49a7.js - HTTP/1.1 500 Internal Server Error  
+3. /_next/static/chunks/turbopack-e077e6bb7fe4289e.js - HTTP/1.1 500 Internal Server Error
+
+WORKING CHUNKS (HTTP 200):
+- /_next/static/chunks/0a9ca1ebb503479d.js - OK
+- /_next/static/chunks/603dadf22349f31d.js - OK
+- /_next/static/chunks/63958b6b50045e32.js - OK
+- /_next/static/chunks/8b3ee4c01d80f632.js - OK
+- /_next/static/chunks/a6dad97d9634a72d.js - OK
+
+========================================
+SERVER EXCEPTIONS (from next-start.log)
+========================================
+
+No server-side exceptions found in logs. Only port binding error (EADDRINUSE) from previous server instance.
+
+========================================
+BROWSER CONSOLE ERRORS (from playwright-run.log)
+========================================
+
+Console errors show:
+- Multiple "Failed to load resource: the server responded with a status of 500 (Internal Server Error)"
+- These correspond to the failing chunk requests above
+- No JavaScript runtime exceptions (ReferenceError/TypeError) in the logs
+- Component shows "Loading Architecture..." but never hydrates because chunks fail to load
+
+========================================
+HYPOTHESIS
+========================================
+
+The root cause is that three critical JavaScript chunks are returning HTTP 500 errors when requested by the browser. These chunks are likely:
+1. The dynamic import chunk for ArchitectureViewerClient (9f7db09326142964.js)
+2. The page-specific chunk containing the project page component (d011264a877f49a7.js)
+3. A Turbopack-specific chunk (turbopack-e077e6bb7fe4289e.js)
+
+When Next.js tries to load these chunks via dynamic import, the server returns 500 errors instead of the JavaScript code. This prevents:
+- The ArchitectureViewerClient component from loading
+- The page from hydrating properly
+- The component from rendering (stuck in "Loading Architecture..." state)
+
+The 500 errors suggest either:
+1. The chunks don't exist in the .next/static/chunks directory (build issue)
+2. The chunks exist but Next.js server cannot serve them (permissions/routing issue)
+3. The chunks contain code that causes a server-side error when Next.js tries to process them (runtime error during chunk serving)
+
+Since the build completes successfully and other chunks serve correctly, this is likely a Next.js/Turbopack production mode issue with how dynamic imports are being chunked and served.
+
+NEXT STEPS:
+- Verify if the failing chunk files exist on disk
+- Check file permissions
+- If files exist, investigate why Next.js server returns 500 for these specific chunks
+- Consider workaround: inline the client component to avoid dynamic chunking
+

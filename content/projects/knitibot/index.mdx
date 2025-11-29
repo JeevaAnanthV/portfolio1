@@ -1,0 +1,54 @@
+---
+title: "KnitiBot"
+slug: "knitibot"
+timeline: "2024–Present"
+roles: ["Lead Developer", "Architect", "ML Engineer"]
+technologies: ["PostgreSQL", "pgvector", "Kafka", "FastAPI", "Python", "LangChain", "React", "Next.js"]
+kpis:
+  - "Reduced manual lookup by 40%"
+  - "Improved response accuracy by 18%"
+  - "20% latency reduction"
+  - "15% accuracy improvement"
+repo_url: ""
+artifact: "/artifacts/knitibot-onepager.pdf"
+---
+
+# KnitiBot
+
+Enterprise multimodal RAG chatbot backed by PostgreSQL + pgvector, integrating internal documents and knowledge resources into a unified interface.
+
+## Overview
+
+KnitiBot is an enterprise-grade RAG (Retrieval-Augmented Generation) chatbot system that significantly reduced manual lookup and overhead across teams. The system integrates internal documents and knowledge resources into a unified interface, backed by PostgreSQL + pgvector and Kafka-driven data pipelines.
+
+## Key Achievements
+
+- **Significantly reduced manual lookup and overhead across teams**
+- **Integrated internal documents and knowledge resources into a unified interface**
+- **Backed by PostgreSQL + pgvector and Kafka-driven data pipelines**
+- **20% latency reduction**
+- **15% accuracy improvement**
+
+## Architecture
+
+The system follows a layered architecture:
+
+1. **Ingestion Layer**: Kafka-based real-time data pipelines for streaming and preprocessing
+2. **Vectorization Layer**: Embedding generation using pgvector extension
+3. **Retriever Layer**: Semantic search with PostgreSQL + pgvector
+4. **RAG Engine**: Context orchestration using LangChain
+5. **API Layer**: Secure FastAPI microservices with JWT/OAuth2
+6. **Frontend**: React/Next.js interface for user interaction
+
+## Technologies
+
+- **Backend**: FastAPI, PostgreSQL, pgvector
+- **Data Pipeline**: Apache Kafka
+- **ML/AI**: LangChain, RAG, Vector embeddings
+- **Frontend**: React, Next.js
+- **Infrastructure**: Docker, Kubernetes
+
+## Impact
+
+KnitiBot has transformed how teams access and interact with internal knowledge resources, reducing manual overhead by 40% and improving response accuracy by 18%.
+

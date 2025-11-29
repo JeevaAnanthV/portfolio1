@@ -45,9 +45,34 @@ async function makePdfAndScreenshots() {
             }
         }
 
-        // Produce a simple PDF of home (example)
-        const pdfPath = path.join(outDir, 'resume_designer.pdf');
-        await page.pdf({ path: pdfPath, format: 'A4', printBackground: true });
+        // Generate resume PDFs
+        const resumeDesignerPath = path.join(outDir, 'resume_designer.pdf');
+        await page.pdf({ path: resumeDesignerPath, format: 'A4', printBackground: true });
+        
+        // Generate ATS version (same content, different styling if needed)
+        const resumeAtsPath = path.join(outDir, 'resume_ats.pdf');
+        await page.pdf({ path: resumeAtsPath, format: 'A4', printBackground: true });
+
+        // Generate project one-pagers
+        for (const slug of slugs) {
+            try {
+                const projectUrl = `${previewUrl}/projects/${slug}`;
+                await page.goto(projectUrl, { waitUntil: 'networkidle', timeout: 10000 });
+                const onePagerPath = path.join(outDir, `${slug}-onepager.pdf`);
+                await page.pdf({ path: onePagerPath, format: 'A4', printBackground: true });
+                console.log(`Generated one-pager for ${slug}`);
+            } catch (e) {
+                console.warn(`Could not generate one-pager for ${slug}: ${e.message}`);
+            }
+        }
+
+        // StackGraph screenshot
+        try {
+            await page.goto(`${previewUrl}/stack`, { waitUntil: 'networkidle', timeout: 10000 });
+            await page.screenshot({ path: path.join(outDir, 'stackgraph.png'), fullPage: true });
+        } catch (e) {
+            console.warn(`Could not screenshot stack page: ${e.message}`);
+        }
     } catch (e) {
         console.error('Error capturing screenshots/PDF:', e);
     }
