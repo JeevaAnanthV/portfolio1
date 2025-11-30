@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Portfolio Diagnostics</title>
+    <style>
+        body { font-family: monospace; background: #0b0b0b; color: #f8f8f8; padding: 20px; }
+        .test { margin: 10px 0; padding: 10px; border: 1px solid #4aa3ff; }
+        .pass { color: #22c55e; }
+        .fail { color: #ef4444; }
+        .warn { color: #fbbf24; }
+    </style>
+</head>
+<body>
+    <h1>Portfolio Diagnostics</h1>
+    <div id="results"></div>
+    
+    <script>
+        const results = document.getElementById('results');
+        
+        function addTest(name, passed, message) {
+            const div = document.createElement('div');
+            div.className = 'test';
+            div.innerHTML = `<strong>${name}:</strong> <span class="${passed ? 'pass' : 'fail'}">${passed ? '✓ PASS' : '✗ FAIL'}</span> - ${message}`;
+            results.appendChild(div);
+        }
+        
+        // Test 1: Canvas mounting
+        setTimeout(() => {
+            const canvases = document.querySelectorAll('canvas');
+            addTest('Canvas Mounting', canvases.length > 0, `Found ${canvases.length} canvas element(s)`);
+            
+            if (canvases.length > 0) {
+                const canvas = canvases[0];
+                const rect = canvas.getBoundingClientRect();
+                addTest('Canvas Dimensions', rect.width > 0 && rect.height > 0, 
+                    `Canvas size: ${rect.width}x${rect.height}`);
+                
+                const style = getComputedStyle(canvas);
+                addTest('Canvas Visibility', style.visibility !== 'hidden', 
+                    `Visibility: ${style.visibility}, z-index: ${style.zIndex}`);
+            }
+        }, 2000);
+        
+        // Test 2: WebGL support
+        const gl = document.createElement('canvas').getContext('webgl2') || 
+                   document.createElement('canvas').getContext('webgl');
+        addTest('WebGL Support', !!gl, gl ? 'WebGL context available' : 'WebGL not available - fallback needed');
+        
+        // Test 3: Hero State
+        setTimeout(() => {
+            if (window.__heroState__) {
+                addTest('Hero State Debug', true, 
+                    `FPS: ${window.__heroState__.fps}, DPR: ${window.__heroState__.dpr}, Ready: ${window.__heroState__.ready}`);
+            } else {
+                addTest('Hero State Debug', false, 'window.__heroState__ not found');
+            }
+        }, 3000);
+        
+        // Test 4: Lighting Director
+        setTimeout(() => {
+            if (window.__lighting__) {
+                addTest('Lighting Director', true, 'Lighting API available');
+            } else {
+                addTest('Lighting Director', false, 'window.__lighting__ not found');
+            }
+        }, 3000);
+        
+        // Test 5: Client Errors
+        setTimeout(() => {
+            if (window.__clientErrors__) {
+                const errors = window.__clientErrors__;
+                if (errors.length === 0) {
+                    addTest('Client Errors', true, 'No errors captured');
+                } else {
+                    addTest('Client Errors', false, `${errors.length} error(s) found: ${JSON.stringify(errors)}`);
+                }
+            }
+        }, 3000);
+        
+        // Test 6: Network check
+        window.addEventListener('error', (e) => {
+            addTest('Runtime Error', false, `Error: ${e.message} at ${e.filename}:${e.lineno}`);
+        });
+    </script>
+</body>
+</html>
+

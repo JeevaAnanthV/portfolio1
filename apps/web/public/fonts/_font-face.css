@@ -1,0 +1,82 @@
+/* Inter Font Face Declarations */
+/* Inter is used as the primary font (fallback from Satoshi) */
+/* License: SIL Open Font License 1.1 */
+
+/* Inter Variable Font (Recommended) */
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/Inter Variable/Inter.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/Inter Variable/Single axis/Inter-italic.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Inter Web Fonts (WOFF2 - Best compression) */
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/Inter Web/Inter.var.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/Inter Web/Inter-italic.var.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Individual weight variants (if variable fonts not supported) */
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/Inter Web/Inter-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/Inter Web/Inter-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/Inter Web/Inter-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/Inter Web/Inter-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Note: If Satoshi font is manually added later, add @font-face declarations here */
+/* Example:
+@font-face {
+  font-family: 'Satoshi';
+  src: url('/fonts/Satoshi-Variable.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+*/
+
